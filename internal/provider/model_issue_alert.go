@@ -1132,7 +1132,7 @@ func (m *IssueAlertActionJiraCreateTicketModel) Fill(ctx context.Context, action
 	m.Name = types.StringPointerValue(action.Name)
 	m.Integration = types.StringValue(action.Integration.String())
 	m.Project = types.StringValue(action.Project)
-	m.IssueType = types.StringValue(action.IssueType)
+	m.IssueType = types.StringValue(action.Issuetype)
 	return
 }
 
@@ -1143,7 +1143,7 @@ func (m IssueAlertActionJiraCreateTicketModel) ToApi(ctx context.Context) (*apic
 		Name:              m.Name.ValueStringPointer(),
 		Integration:       json.Number(m.Integration.ValueString()),
 		Project:           m.Project.ValueString(),
-		IssueType:         m.IssueType.ValueString(),
+		Issuetype:         m.IssueType.ValueString(),
 		DynamicFormFields: []map[string]interface{}{{"dummy": "dummy"}},
 	})
 	if err != nil {

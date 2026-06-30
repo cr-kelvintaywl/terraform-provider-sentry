@@ -2603,7 +2603,7 @@ type ProjectRuleActionJiraCreateTicket struct {
 	DynamicFormFields []map[string]interface{}            `json:"dynamic_form_fields"`
 	Id                ProjectRuleActionJiraCreateTicketId `json:"id"`
 	Integration       json.Number                         `json:"integration"`
-	IssueType         string                              `json:"issueType"`
+	Issuetype         string                              `json:"issuetype"`
 	Name              *string                             `json:"name,omitempty"`
 	Project           string                              `json:"project"`
 	Uuid              *string                             `json:"uuid,omitempty"`

@@ -2300,7 +2300,7 @@ components:
         - id
         - integration
         - project
-        - issueType
+        - issuetype
         - dynamic_form_fields
       properties:
         id:
@@ -2316,7 +2316,7 @@ components:
           x-go-type: json.Number
         project:
           type: string
-        issueType:
+        issuetype:
           type: string
         dynamic_form_fields:
           type: array
